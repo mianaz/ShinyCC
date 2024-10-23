@@ -33,7 +33,8 @@ install.packages(c("shiny", "shinycssloaders", "dplyr", "shinythemes", "shinyWid
 # Install CellChat from GitHub
 devtools::install_github("sqjin/CellChat")
 ```
+Note that when building the shiny app for Shiny Server or shinyapps.io, you will need to delete the "*.o" files in /src/ because they will prevent the package from correctly compiling. To do so, you may either fork the original repository and delete those files yourself, or install my forked version through `devtools::install_github("mianaz/CellChat")`. A locally installed version will not work for shinyapps.io.
 
 ## Input Requirements
-The app requires a **pre-processed** CellChat object that includes the results of cell-cell communication analysis. The CellChat object should be merged if multiple conditions/samples are to be compared.
+The app requires a **pre-processed** CellChat object that includes the results of cell-cell communication analysis. The CellChat object should be merged if multiple conditions/samples are to be compared. 
 
